@@ -20,7 +20,6 @@ pipeline {
 
         stage('Run Unit Tests') {
             steps {
-                echo pwd;
                 echo "Current workspace: ${workspace}"
                 sh 'npm test' // Run unit tests
             }
