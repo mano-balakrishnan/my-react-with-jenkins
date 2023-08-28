@@ -20,7 +20,6 @@ pipeline {
 
         stage('Run Unit Tests') {
             steps {
-                echo "Current workspace: ${workspace}"
                 sh 'npm test' // Run unit tests
             }
         }
@@ -40,7 +39,7 @@ pipeline {
 
     post {
         always {
-            junit 'tests/test-results/**/*.xml' // Publish JUnit test reports
+            junit '**/test-results/**/*.xml' // Publish JUnit test reports
         }
     }
 }
