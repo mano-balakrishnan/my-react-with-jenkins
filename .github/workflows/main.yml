@@ -1,4 +1,4 @@
-name: Print Statement
+name: Print Statement with Secret
 
 on:
   push:
@@ -10,5 +10,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Print Hello
-      run: echo "Hello, GitHub Actions!"
+    - name: Print Secret
+      run: echo "My secret is: ${{ secrets.MY_SECRET }}"
