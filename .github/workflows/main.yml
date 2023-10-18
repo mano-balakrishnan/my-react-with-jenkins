@@ -11,4 +11,4 @@ jobs:
 
     steps:
     - name: Print Secret
-      run: echo "My secret is: ${{ secrets.MY_SECRET }}"
+      run: echo "My secret is ${{ secrets.MY_SECRET }}"
